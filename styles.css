@@ -1,0 +1,16 @@
+/* Paleta de colores #2b463c, #688f4e, #b1d182, #f4f1e9*/
+
+body {
+    background-color: #2b463c;
+    margin: 0;
+}
+
+.avisos {
+    padding-bottom: 60px;
+}
+
+.avisos h2 {
+    color: #b1d182;
+    font-size: 40px;
+}
+

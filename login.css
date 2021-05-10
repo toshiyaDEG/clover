@@ -1,0 +1,36 @@
+body {
+    background-color: #2b463c;
+    margin: 0;
+}
+
+.login {
+    padding-bottom: 60px;
+}
+
+.login h2 {
+    color: #b1d182;
+    font-size: 40px;
+}
+
+.login button {
+    background-color: #688f4e;
+    border: none;
+    
+}
+
+.login label {
+    color: #b1d182;
+}
+
+.login small {
+    color: #f4f1e9;
+}
+
+.login .container {
+    max-width: 400px;
+}
+.form-signin {
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+}
