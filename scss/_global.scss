@@ -1,0 +1,40 @@
+// _global.scss
+// Aquí se declaran los estilos
+
+$color-base: #2b463c;
+$color-title: #688f4e;
+$color-text: #b1d182;
+$color-light: #faf1e9;
+
+//fuente
+$font-title: "Lobster Two", cursive;
+
+//placeholder
+%base-subtitle {
+    color: $color-text;
+    font-family: $font-title;
+    font-size: 60px;
+    font-weight: 700;
+    transition: color 1s;
+}
+
+%base-subtitle:hover {
+    color: $color-title;
+}
+
+%button-clover {
+    display: inline-block;
+    background-color: $color-title;
+    color: $color-light;
+    border-radius: 10px;
+    text-align: center;
+    padding: .375rem .75rem;
+    vertical-align: center;
+    font-weight: 400;
+    border: none;
+    
+}
+
+
+
+

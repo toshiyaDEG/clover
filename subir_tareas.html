@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="output.css">
     <title>Materias</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
 </head>
@@ -56,16 +59,16 @@
     <main class="main">
         <div class="jumbotron jumbotron-fluid mb-0">
             <div class="container">
-                <h1 class="display-4">Clover</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <h1>Clover</h1>
+                <p class="lead">Text text text text Text text text text Text text text text</p>
             </div>
         </div>
     </main>
 
-    <section class="subir_tareas">
-        <div class="container">
-            <h2 class="text-center text-uppercase font-weight-bolder my-5">Nueva Tarea</h2>
-            <p>Sube aquí el documento de la tarea que deberán consultar tus alumnos.</p>
+    <section class="subir_tareas section">
+        <div class="container" style="width: 500px;">
+            <h2 class="text-center my-5">Nueva Tarea</h2>
+            <h3>Sube aquí el documento de la tarea que deberán consultar tus alumnos.</h3>
             <form>
                 <div class="form-group">
                     <label for="validationCustom04">¿A cuál materia pertenece?</label>
@@ -89,7 +92,7 @@
                     <label for="exampleFormControlTextarea1">Comentarios extra para el alumno</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
-                <button class="btn btn-primary" type="submit">Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </section>

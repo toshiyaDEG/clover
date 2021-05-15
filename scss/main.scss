@@ -1,0 +1,46 @@
+//partials
+@use 'global' as *;
+
+.jumbotron {
+    background-color: $color-light;
+    p {
+        color: $color-base;
+        letter-spacing: 2px;
+    }
+}
+
+h2 {
+    @extend %base-subtitle;
+}
+
+h3 {
+    color: $color-light;
+    font-size: 20px;
+}
+button {
+    @extend %button-clover;
+    transition: color 1s ease-in-out,background-color .1s ease-in-out;
+}
+
+button:hover {
+    background-color: $color-text;
+    color: $color-base;
+}
+.section {
+    padding-bottom: 80px;
+}
+
+.menu-materias a{
+        text-decoration: none;
+    .card-img-overlay {
+        align-items: center;
+    }
+}
+
+
+h5 {
+        font-size: 30px;
+        text-decoration: none;
+        color: $color-title;
+    
+}

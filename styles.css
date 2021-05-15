@@ -5,29 +5,29 @@ body {
     margin: 0;
 }
 
-
+h1 {
+    color:#688f4e;
+    font-family: "Lobster Two", cursive;
+    font-size: 80px;
+    font-weight: 400;
+}
 
 h2 {
     color: #b1d182;
     font-size: 40px;
 }
 
-button {
-    background-color: #688f4e;
-    border: none;
-}
 
 @media (max-width: 426px) {
 .main {
     margin-top: 60px;
 }
+
+.section .container {
+    max-width: 300px;
+}
 }
 
-
-
-.avisos, .login, .register, .lista_alumnos, .subir_tareas, .mi-tarea {
-    padding-bottom: 80px;
-}
 
 .menu-materias {
     padding-bottom: 80px;
@@ -47,18 +47,10 @@ small {
     color: #f4f1e9;
 }
 
-.login .container {
-    max-width: 400px;
-}
-
 .form-signin {
     width: 100%;
     padding: 15px;
     margin: auto;
-}
-
-.register .container {
-    max-width: 400px;
 }
 
 .lista_alumnos .lista2 {
@@ -67,12 +59,4 @@ small {
 
 .lista_alumnos .lista2 .col {
     border: 1px solid #688f4e;
-}
-
-.subir_tareas .container {
-    max-width: 400px;
-}
-
-.mi-tarea .container {
-    max-width: 400px;
 }
