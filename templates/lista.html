@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+    {% block body %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h2 class="text-center my-3">Registra tus alumnos</h2>
+
+        <table class="lista">
+            <thead>
+                <tr class="tHead">
+                    <td class="colName">Primer nombre</td>
+                    <td class="colName">Segundo nombre</td>
+                    <td class="colName">Apellido paterno</td>
+                    <td class="colName">Apellido materno</td>
+                    <td class="colName">Tutor</td>
+                    <td class="colName">Telefono</td>
+                    <td class="colName">Correo</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumno in alumnos %}
+                    <tr>
+                        <td class="datoTable">{{ alumno.nombre1 }}</td>
+                        <td class="datoTable">{{ alumno.nombre2 }}</td>
+                        <td class="datoTable">{{ alumno.apellido1 }}</td>
+                        <td class="datoTable">{{ alumno.apellido2 }}</td>
+                        <td class="datoTable">{{ alumno.tutor }}</td>
+                        <td class="datoTable">{{ alumno.telefono }}</td>
+                        <td class="datoTable">{{ alumno.correo }}</td>
+                        <td>
+                            <a href="/test/{{alumno._id}}" role="button"><button type="submit">Put</button></a>
+                            <a href="/update/{{alumno._id}}"><button type="submit">Delete</button></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endblock %}

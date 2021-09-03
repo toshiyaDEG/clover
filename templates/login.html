@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="output.css">
-    <title>Entrar</title>
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="{{ url_for('static',filename='templates.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='output.css') }}">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.png')}}">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="/home">
         <img src="https://imgur.com/fNKba6L.png" width="30" height="30" alt="Clover Logo">
         Clover
     </a>
@@ -23,32 +23,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="register.html">Registrarse</a>
-        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Entrar </a>
+          <a class="nav-link" href="/login">Entrar <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Maestro
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="lista_alumnos.html">Lista de Alumnos</a>
-              <a class="dropdown-item" href="subir_tareas.html">Subir tareas</a>
-            </div>
-        </li>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Maestro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/registro">Registro de Alumnos</a>
+              <a class="dropdown-item" href="/get">Lista de Alumnos</a>
+              <a class="dropdown-item" href="/uptareas">Subir tareas</a>
+          </div>
+      </li>
         <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Alumno
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="alumno_materias.html">Materias</a>
-                  <a class="dropdown-item" href="mi_tarea.html">Ver mi tarea</a>
+                  <a class="dropdown-item" href="/amaterias">Materias</a>
+                  <a class="dropdown-item" href="/sendtarea">Ver mi tarea</a>
                 </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Instrucciones</a>
+          <a class="nav-link" href="/tutorial">Instrucciones</a>
         </li>
       </ul>
       <span class="navbar-text">

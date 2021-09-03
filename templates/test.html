@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+    {% block body %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <form action="/test" method="get post delete">
+        <div>
+            <div class="container" style="width: 600px;">
+                <h2 class="text-center my-3">x</h2>
+                <h3 class="text-center my-3">Edita los campos que consideres necesarios</h3>
+                {% for alumno in alumnos %}
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nombre1">Primer nombre</label>
+                        <input class="form-control" id="nombre1" name="nombre1" placeholder="primer nombre" value="{{alumno.nombre1}}" type="text" required/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="nombre2">Segundo nombre</label>
+                        <input class="form-control" id="nombre2" name="nombre2" type="text"/>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="apellido1">Apellido paterno</label>
+                        <input class="form-control" id="apellido1" name="apellido1" type="text" required/>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellido2">Apellido materno</label>
+                        <input class="form-control" id="apellido2" name="apellido2" type="text" required/>
+                    </div>
+                </div>
+                <div class="form">
+                    <label for="tutor">Nombre del tutor</label>
+                    <input class="form-control" id="tutor" name="tutor" type="text" required/>
+                </div>
+                <div class=form-row>
+                    <div class="form-group col-md-4">
+                        <label for="telefono">Teléfono</label>
+                        <input class="form-control" id="telefono" name="telefono" type="text" required/>
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="correo">Correo</label>
+                        <input class="form-control" id="correo" name="correo" type="text" required/>
+                    </div>
+                </div>
+                <button type="submit">Guardar</button>
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+
+
+{% endblock %}
